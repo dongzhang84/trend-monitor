@@ -4,7 +4,7 @@ from datetime import datetime
 from zoneinfo import ZoneInfo
 
 
-def generate_markdown_report(repos, products, hackernews_posts, ai_tools=None):
+def generate_markdown_report(repos, products, hackernews_posts, ai_tools=None, chrome_extensions=None):
     """生成Markdown格式的报告"""
     pst = ZoneInfo("America/Los_Angeles")
     now = datetime.now(pst)
@@ -43,6 +43,22 @@ def generate_markdown_report(repos, products, hackernews_posts, ai_tools=None):
             lines.append("")
             lines.append(f"- **描述**: {tool['description']}")
             lines.append(f"- **分类**: {tool['category']}")
+            lines.append("")
+    else:
+        lines.append("*暂无数据*")
+        lines.append("")
+
+    lines.append("---")
+    lines.append("")
+    lines.append("## Chrome Extensions 热门")
+    lines.append("")
+
+    if chrome_extensions:
+        for i, ext in enumerate(chrome_extensions, 1):
+            lines.append(f"### {i}. [{ext['name']}]({ext['link']})")
+            lines.append("")
+            lines.append(f"- **描述**: {ext['description']}")
+            lines.append(f"- **安装量**: {ext['users']} | **评分**: {ext['rating']}")
             lines.append("")
     else:
         lines.append("*暂无数据*")

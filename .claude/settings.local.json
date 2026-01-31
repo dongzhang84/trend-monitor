@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "Bash(python3:*)",
-      "WebFetch(domain:theresanaiforthat.com)"
+      "WebFetch(domain:theresanaiforthat.com)",
+      "WebFetch(domain:chrome.google.com)",
+      "WebFetch(domain:chromewebstore.google.com)"
     ]
   }
 }
