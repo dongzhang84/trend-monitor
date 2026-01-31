@@ -2,10 +2,13 @@
 """AI/Tech 趋势监控工具"""
 
 import argparse
+from datetime import datetime
+from zoneinfo import ZoneInfo
 
 from collectors import fetch_trending_repos, fetch_product_hunt_posts, fetch_hackernews_posts, fetch_ai_tools, fetch_chrome_extensions
 from reporters import generate_markdown_report
 from senders import send_email_report
+from storage import save_daily_data
 
 
 def main():
@@ -50,6 +53,22 @@ def main():
         f.write(report)
 
     print("✅ 报告已生成：report.md")
+
+    # 存储每日数据
+    print("正在存储数据...")
+    pst = ZoneInfo("America/Los_Angeles")
+    today = datetime.now(pst).strftime("%Y-%m-%d")
+    daily_data = {
+        "product_hunt": products,
+        "ai_tools": ai_tools,
+        "chrome_extensions": chrome_extensions,
+        "github_trending": repos,
+        "hacker_news": hackernews,
+    }
+    if save_daily_data(today, daily_data):
+        print(f"✅ 数据已存储：data/daily/{today}.json")
+    else:
+        print("⚠️  数据存储失败，继续执行...")
 
     # 发送邮件
     if not args.no_email:

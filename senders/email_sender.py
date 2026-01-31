@@ -9,8 +9,13 @@ from email.mime.multipart import MIMEMultipart
 from dotenv import load_dotenv
 
 
-def send_email_report(report_content):
-    """发送邮件报告"""
+def send_email_report(report_content, subject=None):
+    """发送邮件报告
+
+    Args:
+        report_content: 报告内容（Markdown格式）
+        subject: 邮件主题（可选，默认为日报主题）
+    """
     load_dotenv()
 
     # 读取配置
@@ -26,9 +31,12 @@ def send_email_report(report_content):
         print("     请检查.env文件中的EMAIL_SENDER, EMAIL_PASSWORD, EMAIL_RECEIVER")
         return False
 
-    # 创建邮件
+    # 创建邮件主题
     today = datetime.now().strftime("%Y-%m-%d")
-    subject = f"AI/Tech 趋势日报 - {today}"
+    if subject is None:
+        subject = f"AI/Tech 趋势日报 - {today}"
+    else:
+        subject = f"{subject} - {today}"
 
     msg = MIMEMultipart("alternative")
     msg["Subject"] = subject
