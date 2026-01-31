@@ -16,15 +16,15 @@ def main():
 
     print("正在采集数据...")
 
-    # 采集GitHub Trending
-    print("  - 抓取 GitHub Trending...")
-    repos = fetch_trending_repos(limit=5)
-    print(f"    获取到 {len(repos)} 个项目")
-
     # 采集Product Hunt
     print("  - 抓取 Product Hunt...")
     products = fetch_product_hunt_posts(limit=5)
     print(f"    获取到 {len(products)} 个产品")
+
+    # 采集GitHub Trending
+    print("  - 抓取 GitHub Trending...")
+    repos = fetch_trending_repos(limit=5)
+    print(f"    获取到 {len(repos)} 个项目")
 
     # 采集Hacker News
     print("  - 抓取 Hacker News...")

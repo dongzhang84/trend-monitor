@@ -18,16 +18,15 @@ def generate_markdown_report(repos, products, hackernews_posts):
         "",
         "---",
         "",
-        "## GitHub Trending",
+        "## Product Hunt 今日热门",
         "",
     ]
 
-    if repos:
-        for i, repo in enumerate(repos, 1):
-            lines.append(f"### {i}. [{repo['name']}](https://github.com/{repo['name']})")
+    if products:
+        for i, product in enumerate(products, 1):
+            lines.append(f"### {i}. [{product['name']}]({product['link']})")
             lines.append("")
-            lines.append(f"- **描述**: {repo['description']}")
-            lines.append(f"- **今日Stars**: {repo['today_stars']}")
+            lines.append(f"- **简介**: {product['tagline']}")
             lines.append("")
     else:
         lines.append("*暂无数据*")
@@ -35,14 +34,15 @@ def generate_markdown_report(repos, products, hackernews_posts):
 
     lines.append("---")
     lines.append("")
-    lines.append("## Product Hunt 今日热门")
+    lines.append("## GitHub Trending")
     lines.append("")
 
-    if products:
-        for i, product in enumerate(products, 1):
-            lines.append(f"### {i}. [{product['name']}]({product['link']})")
+    if repos:
+        for i, repo in enumerate(repos, 1):
+            lines.append(f"### {i}. [{repo['name']}](https://github.com/{repo['name']})")
             lines.append("")
-            lines.append(f"- **简介**: {product['tagline']}")
+            lines.append(f"- **描述**: {repo['description']}")
+            lines.append(f"- **今日Stars**: {repo['today_stars']}")
             lines.append("")
     else:
         lines.append("*暂无数据*")
