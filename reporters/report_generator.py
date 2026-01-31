@@ -1,0 +1,63 @@
+"""Markdown 报告生成器"""
+
+from datetime import datetime
+
+
+def generate_markdown_report(repos, products, hackernews_posts):
+    """生成Markdown格式的报告"""
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M")
+
+    lines = [
+        "# AI/Tech 趋势日报",
+        "",
+        f"**生成时间**: {timestamp}",
+        "",
+        "---",
+        "",
+        "## GitHub Trending",
+        "",
+    ]
+
+    if repos:
+        for i, repo in enumerate(repos, 1):
+            lines.append(f"### {i}. [{repo['name']}](https://github.com/{repo['name']})")
+            lines.append("")
+            lines.append(f"- **描述**: {repo['description']}")
+            lines.append(f"- **今日Stars**: {repo['today_stars']}")
+            lines.append("")
+    else:
+        lines.append("*暂无数据*")
+        lines.append("")
+
+    lines.append("---")
+    lines.append("")
+    lines.append("## Product Hunt 今日热门")
+    lines.append("")
+
+    if products:
+        for i, product in enumerate(products, 1):
+            lines.append(f"### {i}. [{product['name']}]({product['link']})")
+            lines.append("")
+            lines.append(f"- **简介**: {product['tagline']}")
+            lines.append("")
+    else:
+        lines.append("*暂无数据*")
+        lines.append("")
+
+    lines.append("---")
+    lines.append("")
+    lines.append("## Hacker News 热门")
+    lines.append("")
+
+    if hackernews_posts:
+        for i, post in enumerate(hackernews_posts, 1):
+            lines.append(f"### {i}. [{post['title']}]({post['url']})")
+            lines.append("")
+            lines.append(f"- **作者**: {post['author']}")
+            lines.append(f"- **分数**: {post['score']} points | **评论**: {post['comments']}")
+            lines.append("")
+    else:
+        lines.append("*暂无数据*")
+        lines.append("")
+
+    return "\n".join(lines)
