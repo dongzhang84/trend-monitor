@@ -6,6 +6,7 @@ from datetime import datetime
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
+import markdown
 from dotenv import load_dotenv
 
 
@@ -46,7 +47,7 @@ def send_email_report(report_content, subject=None):
     # 纯文本版本
     text_content = report_content
 
-    # HTML版本（简单转换Markdown）
+    # HTML版本（使用markdown库转换）
     html_content = markdown_to_html(report_content)
 
     msg.attach(MIMEText(text_content, "plain", "utf-8"))
@@ -72,39 +73,6 @@ def send_email_report(report_content, subject=None):
 
 
 def markdown_to_html(md_content):
-    """简单的Markdown转HTML"""
-    lines = md_content.split("\n")
-    html_lines = ["<html><body style='font-family: Arial, sans-serif;'>"]
-
-    for line in lines:
-        if line.startswith("# "):
-            html_lines.append(f"<h1>{line[2:]}</h1>")
-        elif line.startswith("## "):
-            html_lines.append(f"<h2 style='color: #333; border-bottom: 1px solid #ccc;'>{line[3:]}</h2>")
-        elif line.startswith("### "):
-            # 处理链接
-            text = line[4:]
-            if "[" in text and "](" in text:
-                text = convert_md_links(text)
-            html_lines.append(f"<h3 style='margin-bottom: 5px;'>{text}</h3>")
-        elif line.startswith("- **"):
-            text = line[2:]
-            text = text.replace("**", "<strong>", 1).replace("**", "</strong>", 1)
-            html_lines.append(f"<p style='margin: 2px 0 2px 20px;'>{text}</p>")
-        elif line.startswith("**"):
-            text = line.replace("**", "<strong>", 1).replace("**", "</strong>", 1)
-            html_lines.append(f"<p>{text}</p>")
-        elif line == "---":
-            html_lines.append("<hr style='margin: 20px 0;'>")
-        elif line.strip():
-            html_lines.append(f"<p>{line}</p>")
-
-    html_lines.append("</body></html>")
-    return "\n".join(html_lines)
-
-
-def convert_md_links(text):
-    """转换Markdown链接为HTML链接"""
-    import re
-    pattern = r'\[([^\]]+)\]\(([^)]+)\)'
-    return re.sub(pattern, r'<a href="\2" style="color: #0066cc;">\1</a>', text)
+    """使用markdown库将Markdown转换为HTML"""
+    body = markdown.markdown(md_content, extensions=['extra', 'nl2br'])
+    return f'<html><body style="font-family: Arial; max-width: 800px; margin: 0 auto; padding: 20px;">{body}</body></html>'
