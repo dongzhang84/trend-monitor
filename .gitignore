@@ -13,7 +13,6 @@ venv/
 # 生成的文件
 report.md
 weekly_report.md
-data/
 reports/
 logs/
 

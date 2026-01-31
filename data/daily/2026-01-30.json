@@ -1,0 +1,164 @@
+{
+  "date": "2026-01-30",
+  "timestamp": "2026-01-30T09:30:00-08:00",
+  "product_hunt": [
+    {
+      "name": "ClaudeUsageBar",
+      "tagline": "Track Claude usage",
+      "link": "https://producthunt.com/1"
+    },
+    {
+      "name": "AI Writer Pro",
+      "tagline": "Write with AI",
+      "link": "https://producthunt.com/2"
+    },
+    {
+      "name": "CodeHelper",
+      "tagline": "AI coding assistant",
+      "link": "https://producthunt.com/3"
+    },
+    {
+      "name": "DataViz",
+      "tagline": "Visualize data easily",
+      "link": "https://producthunt.com/4"
+    },
+    {
+      "name": "TaskMaster",
+      "tagline": "Manage tasks with AI",
+      "link": "https://producthunt.com/5"
+    }
+  ],
+  "ai_tools": [
+    {
+      "name": "Piooy AI Image Generator",
+      "description": "Create images",
+      "category": "Images",
+      "link": "https://ai.com/1"
+    },
+    {
+      "name": "ChatBot Pro",
+      "description": "Advanced chatbot",
+      "category": "Chat",
+      "link": "https://ai.com/2"
+    },
+    {
+      "name": "VoiceAI",
+      "description": "Voice synthesis",
+      "category": "Voice",
+      "link": "https://ai.com/3"
+    },
+    {
+      "name": "TranslateAI",
+      "description": "AI translation",
+      "category": "Translation",
+      "link": "https://ai.com/4"
+    },
+    {
+      "name": "SummarizeIt",
+      "description": "Summarize text",
+      "category": "Text",
+      "link": "https://ai.com/5"
+    }
+  ],
+  "chrome_extensions": [
+    {
+      "name": "Monica: All-In-One AI Assist & Smartest  AI Agent",
+      "description": "AI assistant",
+      "users": "3M",
+      "rating": "4.8",
+      "link": "https://chrome.com/1"
+    },
+    {
+      "name": "AdBlocker Pro",
+      "description": "Block ads",
+      "users": "10M",
+      "rating": "4.5",
+      "link": "https://chrome.com/2"
+    },
+    {
+      "name": "Dark Reader",
+      "description": "Dark mode",
+      "users": "5M",
+      "rating": "4.7",
+      "link": "https://chrome.com/3"
+    },
+    {
+      "name": "Grammarly",
+      "description": "Grammar checker",
+      "users": "20M",
+      "rating": "4.6",
+      "link": "https://chrome.com/4"
+    },
+    {
+      "name": "LastPass",
+      "description": "Password manager",
+      "users": "8M",
+      "rating": "4.4",
+      "link": "https://chrome.com/5"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "microsoft/BitNet",
+      "description": "1-bit LLMs",
+      "today_stars": "200 stars today"
+    },
+    {
+      "name": "openai/whisper",
+      "description": "Speech recognition",
+      "today_stars": "150 stars today"
+    },
+    {
+      "name": "langchain/langchain",
+      "description": "LLM framework",
+      "today_stars": "180 stars today"
+    },
+    {
+      "name": "huggingface/transformers",
+      "description": "NLP models",
+      "today_stars": "120 stars today"
+    },
+    {
+      "name": "pytorch/pytorch",
+      "description": "Deep learning",
+      "today_stars": "100 stars today"
+    }
+  ],
+  "hacker_news": [
+    {
+      "title": "Antirender: remove the glossy shine on architectural renderings",
+      "author": "user1",
+      "score": 500,
+      "comments": 100,
+      "url": "https://hn.com/1"
+    },
+    {
+      "title": "GPT-5 Released",
+      "author": "user2",
+      "score": 1000,
+      "comments": 500,
+      "url": "https://hn.com/2"
+    },
+    {
+      "title": "Rust vs Go in 2026",
+      "author": "user3",
+      "score": 300,
+      "comments": 200,
+      "url": "https://hn.com/3"
+    },
+    {
+      "title": "The Future of AI",
+      "author": "user4",
+      "score": 400,
+      "comments": 150,
+      "url": "https://hn.com/4"
+    },
+    {
+      "title": "Building LLM Apps",
+      "author": "user5",
+      "score": 250,
+      "comments": 80,
+      "url": "https://hn.com/5"
+    }
+  ]
+}

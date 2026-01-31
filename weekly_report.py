@@ -30,8 +30,12 @@ def main():
         return
 
     period = insights["period"]
+    days_with_data = period["days_with_data"]
     print(f"  - 数据范围: {period['start']} ~ {period['end']}")
-    print(f"  - 有效天数: {period['days_with_data']}")
+    print(f"  - 有效天数: {days_with_data}")
+
+    if days_with_data < args.days:
+        print(f"  ⚠️  数据不足{args.days}天，基于现有{days_with_data}天数据生成周报")
 
     # 生成周报
     print("正在生成周报...")

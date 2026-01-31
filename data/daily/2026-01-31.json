@@ -1,0 +1,164 @@
+{
+  "date": "2026-01-31",
+  "timestamp": "2026-01-31T09:43:33.244524-08:00",
+  "product_hunt": [
+    {
+      "name": "skills.sh",
+      "tagline": "The Agent Skills Directory",
+      "link": "https://www.producthunt.com/products/vercel"
+    },
+    {
+      "name": "DestMate",
+      "tagline": "Alarm with location wake-up and earphone-only sound",
+      "link": "https://www.producthunt.com/products/destmate-travel-alarm"
+    },
+    {
+      "name": "ClaudeUsageBar",
+      "tagline": "Know exactly how much Claude you have left at a glance",
+      "link": "https://www.producthunt.com/products/claudeusagebar"
+    },
+    {
+      "name": "Pretty Prompt 1.0 Extension and Web App",
+      "tagline": "Grammarly for prompting. Turn any text into perfect prompts.",
+      "link": "https://www.producthunt.com/products/pretty-prompt"
+    },
+    {
+      "name": "Herodot AI",
+      "tagline": "Travel at any place like with a personal local guide",
+      "link": "https://www.producthunt.com/products/herodot-ai"
+    }
+  ],
+  "ai_tools": [
+    {
+      "name": "Orphiq",
+      "description": "AI music strategist for release planning and career strategy.",
+      "category": "Music marketing",
+      "link": "https://theresanaiforthat.com/ai/orphiq/"
+    },
+    {
+      "name": "VideoAny Lip Sync AI Online",
+      "description": "Turn photos and audio into lip-sync videos.",
+      "category": "Lip sync videos",
+      "link": "https://theresanaiforthat.com/ai/videoany-lip-sync-ai-online/"
+    },
+    {
+      "name": "AirMusicv1.1",
+      "description": "v1.1",
+      "category": "Music",
+      "link": "https://theresanaiforthat.com/ai/airmusic/"
+    },
+    {
+      "name": "Piooy AI Image Generator",
+      "description": "Create stunning images from text prompts instantly.",
+      "category": "Images",
+      "link": "https://theresanaiforthat.com/ai/piooy-ai-image-generator/"
+    },
+    {
+      "name": "Lullaby",
+      "description": "Transform your child's photo into custom illustrated storybooks.",
+      "category": "Storybooks",
+      "link": "https://theresanaiforthat.com/ai/lullaby/"
+    }
+  ],
+  "chrome_extensions": [
+    {
+      "name": "QuestionAI Homework Powered AI Assistant",
+      "description": "AI Copilot can answer screenshot queries and assist with writing, summarizing, translating, and grammar checking.",
+      "users": "100,000 users",
+      "rating": "N/A",
+      "link": "https://chromewebstore.google.com/detail/questionai-homework-power/hajphibbdloomfdkeoejchiikjggnaif"
+    },
+    {
+      "name": "Monica: All-In-One AI Assist & Smartest  AI Agent",
+      "description": "One stop AI Assistant with GPT, Claude, Gemini: Chat, Write, Translate, Search, Summarize, image generator, video generation",
+      "users": "3,000,000 users",
+      "rating": "N/A",
+      "link": "https://chromewebstore.google.com/detail/monica-all-in-one-ai-assi/ofpnmcalabcbjgholdjcjblkibolbppb"
+    },
+    {
+      "name": "Brisk Teaching – AI Assistant for Teachers",
+      "description": "Teaching is irreplaceable. For the rest of your workload, there's Brisk.\n\nAs educators, your time and effort are invaluable. That's…",
+      "users": "1,000,000 users",
+      "rating": "N/A",
+      "link": "https://chromewebstore.google.com/detail/brisk-teaching-%E2%80%93-ai-assis/pcblbflgdkdfdjpjifeppkljdnaekohj"
+    },
+    {
+      "name": "HyperWrite - AI Writing Assistant",
+      "description": "HyperWrite brings advanced AI writing tools to your browser. Brainstorm, draft, and edit content anywhere you work online.",
+      "users": "90,000 users",
+      "rating": "N/A",
+      "link": "https://chromewebstore.google.com/detail/hyperwrite-ai-writing-ass/kljjoeapehcmaphfcjkmbhkinoaopdnd"
+    },
+    {
+      "name": "Voila – AI Assistant, Copilot and AI Writer",
+      "description": "Seamless personal AI assistant powered by GPT-5 to help you create, write, summarize, brainstorm, and research on any website.",
+      "users": "80,000 users",
+      "rating": "N/A",
+      "link": "https://chromewebstore.google.com/detail/voila-%E2%80%93-ai-assistant-copi/cakobppopkpmmglabcdcklncbckjpkcl"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "ThePrimeagen/99",
+      "description": "Neovim AI agent done right",
+      "today_stars": "499 stars today"
+    },
+    {
+      "name": "microsoft/BitNet",
+      "description": "Official inference framework for 1-bit LLMs",
+      "today_stars": "136 stars today"
+    },
+    {
+      "name": "microsoft/agent-lightning",
+      "description": "The absolute trainer to light up AI agents.",
+      "today_stars": "515 stars today"
+    },
+    {
+      "name": "PaddlePaddle/PaddleOCR",
+      "description": "Turn any PDF or image document into structured data for your AI. A powerful, lightweight OCR toolkit that bridges the gap between images/PDFs and LLMs. Supports 100+ languages.",
+      "today_stars": "177 stars today"
+    },
+    {
+      "name": "anthropics/claude-plugins-official",
+      "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+      "today_stars": "270 stars today"
+    }
+  ],
+  "hacker_news": [
+    {
+      "title": "Apple Platform Security (Jan 2026) [pdf]",
+      "author": "pieterr",
+      "score": 40,
+      "comments": 11,
+      "url": "https://help.apple.com/pdf/security/en_US/apple-platform-security-guide.pdf"
+    },
+    {
+      "title": "Antirender: remove the glossy shine on architectural renderings",
+      "author": "iambateman",
+      "score": 1684,
+      "comments": 409,
+      "url": "https://antirender.com/"
+    },
+    {
+      "title": "CPython Internals Explained",
+      "author": "yufiz",
+      "score": 65,
+      "comments": 14,
+      "url": "https://github.com/zpoint/CPython-Internals"
+    },
+    {
+      "title": "Animated AVIF for the Modern Web",
+      "author": "sdoering",
+      "score": 22,
+      "comments": 8,
+      "url": "https://arthur.pizza/2025/12/animated-avif-for-the-modern-web/"
+    },
+    {
+      "title": "NASA's WB-57 crash lands at Houston",
+      "author": "verzali",
+      "score": 97,
+      "comments": 39,
+      "url": "https://arstechnica.com/space/2026/01/one-of-nasas-three-wb-57-aircraft-just-did-a-belly-landing-in-houston/"
+    }
+  ]
+}
