@@ -3,11 +3,11 @@
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-Daily automated monitoring of AI and tech trends from GitHub, Product Hunt, and Hacker News. Get a curated digest delivered to your inbox every morning.
+Daily business opportunity discovery tool - monitors AI products and trending tools from 5 sources. Get a curated digest delivered to your inbox every morning to discover new products and market opportunities.
 
 ## Features
 
-- **Multi-source Aggregation** - Collects trending data from GitHub, Product Hunt, and Hacker News
+- **Multi-source Aggregation** - Collects data from 5 sources: Product Hunt, There's An AI For That, Chrome Extensions, GitHub, Hacker News
 - **Automated Reports** - Generates clean Markdown reports with all trending items
 - **Email Delivery** - Sends formatted HTML emails directly to your inbox
 - **GitHub Actions** - Fully automated daily execution at 7:30 AM PST
@@ -17,8 +17,10 @@ Daily automated monitoring of AI and tech trends from GitHub, Product Hunt, and 
 
 | Source | Data Collected |
 |--------|---------------|
-| **GitHub Trending** | Repository name, description, daily stars |
 | **Product Hunt** | Product name, tagline, product link |
+| **There's An AI For That** | AI tool name, description, category, link |
+| **Chrome Extensions** | Extension name, description, users, rating, link |
+| **GitHub Trending** | Repository name, description, daily stars |
 | **Hacker News** | Title, author, score, comment count, link |
 
 ## Installation
@@ -160,7 +162,9 @@ trend-monitor/
 │   ├── __init__.py
 │   ├── github_trending.py
 │   ├── product_hunt.py
-│   └── hackernews.py
+│   ├── hackernews.py
+│   ├── theresanaiforthat.py
+│   └── chrome_extensions.py
 │
 ├── reporters/             # Report generation
 │   ├── __init__.py
@@ -180,7 +184,33 @@ trend-monitor/
 ```markdown
 # AI/Tech 趋势日报
 
-**生成时间**: 2026-01-30 07:30 (PST)
+**生成时间**: 2026-01-31 07:30 (PST)
+
+---
+
+## Product Hunt 今日热门
+
+### 1. [AI Assistant Pro](https://www.producthunt.com/posts/ai-assistant-pro)
+
+- **简介**: Your personal AI productivity companion
+
+---
+
+## There's An AI For That - 今日新工具
+
+### 1. [ImageGen AI](https://theresanaiforthat.com/ai/imagegen-ai/)
+
+- **描述**: Create stunning images from text prompts instantly
+- **分类**: Images
+
+---
+
+## Chrome Extensions 热门
+
+### 1. [Compose AI](https://chromewebstore.google.com/detail/compose-ai/...)
+
+- **描述**: Accelerate your writing with AI
+- **安装量**: 300,000 users | **评分**: 4.8/5.0
 
 ---
 
@@ -190,14 +220,6 @@ trend-monitor/
 
 - **描述**: Claude's official coding assistant
 - **今日Stars**: 1,234 stars today
-
----
-
-## Product Hunt 今日热门
-
-### 1. [AI Assistant Pro](https://www.producthunt.com/posts/ai-assistant-pro)
-
-- **简介**: Your personal AI productivity companion
 
 ---
 
@@ -261,8 +283,10 @@ Please ensure your code follows the existing style and includes appropriate test
 
 ## Acknowledgments
 
-- [GitHub](https://github.com) for the trending page
 - [Product Hunt](https://www.producthunt.com) for the RSS feed
+- [There's An AI For That](https://theresanaiforthat.com) for AI tool discovery
+- [Chrome Web Store](https://chromewebstore.google.com) for extension data
+- [GitHub](https://github.com) for the trending page
 - [Hacker News](https://news.ycombinator.com) for the open API
 - [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/) for HTML parsing
 
