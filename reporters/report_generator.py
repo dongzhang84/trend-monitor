@@ -4,7 +4,7 @@ from datetime import datetime
 from zoneinfo import ZoneInfo
 
 
-def generate_markdown_report(repos, products, hackernews_posts):
+def generate_markdown_report(repos, products, hackernews_posts, ai_tools=None):
     """生成Markdown格式的报告"""
     pst = ZoneInfo("America/Los_Angeles")
     now = datetime.now(pst)
@@ -27,6 +27,22 @@ def generate_markdown_report(repos, products, hackernews_posts):
             lines.append(f"### {i}. [{product['name']}]({product['link']})")
             lines.append("")
             lines.append(f"- **简介**: {product['tagline']}")
+            lines.append("")
+    else:
+        lines.append("*暂无数据*")
+        lines.append("")
+
+    lines.append("---")
+    lines.append("")
+    lines.append("## There's An AI For That - 今日新工具")
+    lines.append("")
+
+    if ai_tools:
+        for i, tool in enumerate(ai_tools, 1):
+            lines.append(f"### {i}. [{tool['name']}]({tool['link']})")
+            lines.append("")
+            lines.append(f"- **描述**: {tool['description']}")
+            lines.append(f"- **分类**: {tool['category']}")
             lines.append("")
     else:
         lines.append("*暂无数据*")

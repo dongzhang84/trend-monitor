@@ -3,7 +3,7 @@
 
 import argparse
 
-from collectors import fetch_trending_repos, fetch_product_hunt_posts, fetch_hackernews_posts
+from collectors import fetch_trending_repos, fetch_product_hunt_posts, fetch_hackernews_posts, fetch_ai_tools
 from reporters import generate_markdown_report
 from senders import send_email_report
 
@@ -21,6 +21,11 @@ def main():
     products = fetch_product_hunt_posts(limit=5)
     print(f"    获取到 {len(products)} 个产品")
 
+    # 采集There's An AI For That
+    print("  - 抓取 There's An AI For That...")
+    ai_tools = fetch_ai_tools(limit=5)
+    print(f"    获取到 {len(ai_tools)} 个AI工具")
+
     # 采集GitHub Trending
     print("  - 抓取 GitHub Trending...")
     repos = fetch_trending_repos(limit=5)
@@ -33,7 +38,7 @@ def main():
 
     # 生成报告
     print("正在生成报告...")
-    report = generate_markdown_report(repos, products, hackernews)
+    report = generate_markdown_report(repos, products, hackernews, ai_tools)
 
     # 写入文件
     with open("report.md", "w", encoding="utf-8") as f:
