@@ -86,9 +86,9 @@ def fetch_chrome_extensions(limit=5):
             if desc_match:
                 description = unescape(desc_match.group(1))
 
-            # 提取评分
+            # 提取评分 (从 aria-label="4.7 out of 5 stars" 格式)
             rating = "N/A"
-            rating_match = re.search(r'"ratingValue"[:\s]*"?(\d+\.?\d*)"?', html)
+            rating_match = re.search(r'aria-label="([0-9.]+) out of 5 stars?"', html)
             if rating_match:
                 rating = f"{rating_match.group(1)}/5.0"
 
