@@ -13,8 +13,8 @@ HEADERS = {
 
 
 def fetch_ai_tools(limit=5):
-    """获取 There's An AI For That 网站的AI工具列表"""
-    url = "https://theresanaiforthat.com/"
+    """获取 There's An AI For That 网站的热门AI工具列表"""
+    url = "https://theresanaiforthat.com/popular/"
 
     try:
         response = requests.get(url, headers=HEADERS, timeout=15)
