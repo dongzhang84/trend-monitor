@@ -1,4 +1,4 @@
-# trend-monitor
+ # trend-monitor
 
 ## 项目说明
 AI/Tech 趋势监控工具，自动采集热点数据，生成日报和周报，通过邮件发送。

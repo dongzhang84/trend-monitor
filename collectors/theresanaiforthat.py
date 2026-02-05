@@ -13,8 +13,9 @@ HEADERS = {
 
 
 def fetch_ai_tools(limit=5):
-    """获取 There's An AI For That 网站的热门AI工具列表"""
-    url = "https://theresanaiforthat.com/popular/"
+    """获取 There's An AI For That 网站最新上传的AI工具"""
+    # /new/ 页面 - 最新上传的工具
+    url = "https://theresanaiforthat.com/new/"
 
     try:
         response = requests.get(url, headers=HEADERS, timeout=15)
@@ -26,44 +27,31 @@ def fetch_ai_tools(limit=5):
     soup = BeautifulSoup(response.text, "html.parser")
     tools = []
 
-    # 查找工具卡片
-    tool_cards = soup.select(".li")[:limit * 3]  # 获取更多以防有些不完整
+    # 查找工具卡片 - /new/ 页面用 data-name 属性
+    tool_cards = soup.select(".li[data-name]")[:limit * 3]
 
     for card in tool_cards:
         if len(tools) >= limit:
             break
 
-        # 查找所有 a 标签
-        links = card.find_all("a")
-        if not links:
+        # 从 data 属性获取信息
+        name = card.get("data-name", "")
+        category = card.get("data-task", "AI工具")
+
+        # 获取链接
+        ai_link = card.select_one("a.ai_link")
+        if not ai_link:
             continue
-
-        # 第一个 a 标签通常包含工具名称和链接
-        first_link = links[0]
-        name = first_link.get_text(strip=True)
-        href = first_link.get("href", "")
-
-        # 只处理 /ai/ 开头的链接（真正的工具）
-        if not href.startswith("/ai/"):
-            continue
-
+        href = ai_link.get("href", "")
         link = "https://theresanaiforthat.com" + href
 
-        # 获取整个卡片的文本，从中提取描述
-        # 描述通常紧跟在工具名后面
-        full_text = card.get_text(separator="|", strip=True)
-        parts = full_text.split("|")
+        # 获取描述
+        desc_el = card.select_one(".short_desc")
+        description = desc_el.get_text(strip=True) if desc_el else ""
 
-        # 第一部分是名称，第二部分通常是描述
-        description = parts[1] if len(parts) > 1 else "无描述"
-
-        # 查找分类（链接到 /task/ 的标签）
-        category = "AI工具"
-        for a_tag in links:
-            task_href = a_tag.get("href", "")
-            if task_href.startswith("/task/"):
-                category = a_tag.get_text(strip=True)
-                break
+        # 跳过无效描述
+        if len(description) < 10:
+            continue
 
         if name and len(name) > 1:
             tools.append({

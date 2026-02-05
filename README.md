@@ -143,7 +143,7 @@ Go to your repository on GitHub:
 ### 3. Schedule
 
 The workflows run automatically:
-- **Daily Reports**: 7:30 AM PST (every day)
+- **Daily Reports**: 7:00 AM PST (every day)
 - **Weekly Reports**: 10:00 PM PST (every Sunday)
 
 To manually trigger a workflow:
@@ -244,7 +244,7 @@ trend-monitor/
 ```markdown
 # AI/Tech 趋势日报
 
-**生成时间**: 2026-01-31 07:30 (PST)
+**生成时间**: 2026-01-31 07:00 (PST)
 
 ---
 

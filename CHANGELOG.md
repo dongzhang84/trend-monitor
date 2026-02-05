@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.2] - 2026-02-04
+
+### Fixed
+- Chrome Extension rating display issue (fixed rating extraction logic)
+- There's An AI For That data source changed to `/new/` page (latest tools instead of stale trending)
+- Filter out B2B tools, focus on personal-use tools
+- Daily report send time adjusted from 7:30 AM to 7:00 AM PST
+
 ## [1.2.1] - 2026-02-02
 
 ### Fixed
