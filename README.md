@@ -3,11 +3,11 @@
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-Daily business opportunity discovery tool - monitors AI products and trending tools from 5 sources. Get a curated digest delivered to your inbox every morning to discover new products and market opportunities.
+Daily business opportunity discovery tool - monitors AI products and trending tools from 6 sources. Get a curated digest delivered to your inbox every morning to discover new products and market opportunities.
 
 ## Features
 
-- **Multi-source Aggregation** - Collects data from 5 sources: Product Hunt, There's An AI For That, Chrome Extensions, GitHub, Hacker News
+- **Multi-source Aggregation** - Collects data from 6 sources: Product Hunt, Toolify.ai, There's An AI For That, Chrome Extensions, GitHub, Hacker News
 - **Automated Reports** - Generates clean Markdown reports with all trending items
 - **Weekly Reports** - Automated weekly summaries with trend analysis every Sunday 22:00 PST
 - **Email Delivery** - Sends formatted HTML emails directly to your inbox
@@ -19,6 +19,7 @@ Daily business opportunity discovery tool - monitors AI products and trending to
 | Source | Data Collected |
 |--------|---------------|
 | **Product Hunt** | Product name, tagline, product link |
+| **Toolify.ai** | Latest tools (name, description, link) + Trending tools (name, description, monthly visits, growth rate, link) |
 | **There's An AI For That** | AI tool name, description, category, link |
 | **Chrome Extensions** | Extension name, description, users, rating, link |
 | **GitHub Trending** | Repository name, description, daily stars |
@@ -44,6 +45,7 @@ cd trend-monitor
 
 ```bash
 pip install -r requirements.txt
+playwright install chromium --with-deps
 ```
 
 3. **Configure environment variables**
@@ -206,7 +208,8 @@ trend-monitor/
 │   ├── product_hunt.py
 │   ├── hackernews.py
 │   ├── theresanaiforthat.py
-│   └── chrome_extensions.py
+│   ├── chrome_extensions.py
+│   └── toolify.py         # Playwright-based (bypasses Cloudflare)
 │
 ├── reporters/             # Report generation
 │   ├── __init__.py
@@ -244,7 +247,7 @@ trend-monitor/
 ```markdown
 # AI/Tech 趋势日报
 
-**生成时间**: 2026-01-31 07:00 (PST)
+**生成时间**: 2026-03-17 07:00 (PDT)
 
 ---
 
@@ -253,6 +256,19 @@ trend-monitor/
 ### 1. [AI Assistant Pro](https://www.producthunt.com/posts/ai-assistant-pro)
 
 - **简介**: Your personal AI productivity companion
+
+---
+
+## Toolify - AI 工具
+
+### 最新上线
+
+1. **[PUNK](https://www.toolify.ai/tool/punk-remote-control-for-claude-code)** - Mobile remote control for local Claude Code AI agents.
+
+### Trending 榜单
+
+1. **[Claude 2](https://www.toolify.ai/tool/claude-2)** - Claude is an AI assistant from Anthropic.
+   - 月访问量: 290.3M | 增长率: 43.07%
 
 ---
 
@@ -303,8 +319,9 @@ trend-monitor/
 
 ## 本周数据概览
 
-- **监测条目总数**: 175 个
+- **监测条目总数**: 210 个
 - Product Hunt: 35 个 (去重后 28 个)
+- Toolify Trending: 70 个 (去重后 60 个)
 - AI 工具: 35 个 (去重后 30 个)
 - Chrome 扩展: 35 个 (去重后 32 个)
 - GitHub 项目: 35 个 (去重后 33 个)
@@ -366,6 +383,16 @@ trend-monitor/
 
 **Solution**: The script has built-in timeout handling. Failed requests are skipped gracefully.
 
+### Toolify Returns Empty / Cloudflare Blocked
+
+**Cause**: Toolify.ai uses Cloudflare protection that blocks plain HTTP requests
+
+**Solution**: The collector uses Playwright to render the page in a real browser. Make sure Chromium is installed:
+```bash
+playwright install chromium --with-deps
+```
+In GitHub Actions this step runs automatically before the script.
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
@@ -387,7 +414,9 @@ Please ensure your code follows the existing style and includes appropriate test
 - [Chrome Web Store](https://chromewebstore.google.com) for extension data
 - [GitHub](https://github.com) for the trending page
 - [Hacker News](https://news.ycombinator.com) for the open API
+- [Toolify.ai](https://www.toolify.ai) for AI tool trending data
 - [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/) for HTML parsing
+- [Playwright](https://playwright.dev/python/) for browser automation
 
 ---
 

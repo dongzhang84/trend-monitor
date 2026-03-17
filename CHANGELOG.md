@@ -5,6 +5,27 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.3.0] - 2026-03-17
+
+### Added
+- Toolify.ai data source with two sections: latest tools (`/new`) and trending tools (`/Best-trending-AI-Tools`)
+- Trending tools include monthly visit count and growth rate (e.g. `1054%`)
+- Toolify section in daily report (最新上线 + Trending 榜单)
+- Toolify integrated into weekly report: overview, repeated items, new discoveries, statistics
+- Playwright-based scraper to bypass Cloudflare protection on Toolify.ai
+
+### Changed
+- Data source count increased from 5 to 6
+- Daily data JSON now includes `toolify` field (combined new + trending, 10 items)
+- Report section order: Product Hunt → Toolify → TAAFT → Chrome Extensions → GitHub → Hacker News
+- Weekly report overview and statistics updated to include Toolify Trending
+
+### Technical
+- Added `collectors/toolify.py` with `fetch_new_tools()`, `fetch_trending_tools()`, `fetch_toolify_tools()`
+- Added `playwright>=1.40.0` to `requirements.txt`
+- Both GitHub Actions workflows now install Chromium via `playwright install chromium --with-deps`
+- Toolify returns `{'new': [...], 'trending': [...]}` dict; stored as merged flat list for weekly analysis
+
 ## [1.2.2] - 2026-02-04
 
 ### Fixed
