@@ -2,12 +2,14 @@
 """AI/Tech 趋势监控工具"""
 
 import argparse
+import os
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
 from collectors import fetch_trending_repos, fetch_product_hunt_posts, fetch_hackernews_posts, fetch_ai_tools, fetch_chrome_extensions
 from collectors.toolify import fetch_toolify_tools
 from reporters import generate_markdown_report
+from reporters.html_generator import generate_html_report
 from senders import send_email_report
 from storage import save_daily_data
 
@@ -66,6 +68,21 @@ def main():
         f.write(report)
 
     print("✅ 报告已生成：report.md")
+
+    # 生成HTML报告
+    html_report = generate_html_report(
+        product_hunt_data,
+        toolify_data,
+        ai_tools_data,
+        chrome_extensions_data,
+        github_trending_data,
+        hackernews_data,
+    )
+    os.makedirs("docs", exist_ok=True)
+    with open("docs/index.html", "w", encoding="utf-8") as f:
+        f.write(html_report)
+
+    print("✅ HTML report saved to docs/index.html")
 
     # 存储每日数据
     print("正在存储数据...")

@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI/Tech Daily Trends</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0f1117;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1a1f2e 0%, #16213e 100%);
+            border-bottom: 1px solid #2d3748;
+            padding: 32px 24px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: -0.5px;
+        }
+
+        .header h1 span { color: #60a5fa; }
+
+        .header .date {
+            margin-top: 8px;
+            font-size: 14px;
+            color: #718096;
+        }
+
+        .source-pills {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 16px;
+        }
+
+        .pill {
+            background: #2d3748;
+            color: #a0aec0;
+            font-size: 12px;
+            padding: 4px 12px;
+            border-radius: 999px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 32px 16px 64px;
+        }
+
+        .section {
+            margin-bottom: 48px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #2d3748;
+        }
+
+        .section-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #f7fafc;
+        }
+
+        .section-count {
+            margin-left: auto;
+            font-size: 12px;
+            color: #718096;
+            background: #2d3748;
+            padding: 2px 10px;
+            border-radius: 999px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 16px;
+        }
+
+        .card {
+            background: #1a1f2e;
+            border: 1px solid #2d3748;
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            transition: border-color 0.2s;
+        }
+
+        .card:hover { border-color: #4a5568; }
+
+        .card-rank {
+            font-size: 11px;
+            font-weight: 600;
+            color: #60a5fa;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .card-name {
+            font-size: 15px;
+            font-weight: 600;
+            color: #f7fafc;
+        }
+
+        .card-desc {
+            font-size: 13px;
+            color: #a0aec0;
+            flex: 1;
+        }
+
+        .card-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .badge {
+            font-size: 11px;
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-weight: 500;
+        }
+
+        .badge-purple { background: #1e3a5f; color: #60a5fa; }
+        .badge-green  { background: #14532d; color: #86efac; }
+        .badge-blue   { background: #1e3a5f; color: #93c5fd; }
+        .badge-orange { background: #431407; color: #fb923c; }
+        .badge-gray   { background: #2d3748; color: #a0aec0; }
+
+        .card-link {
+            display: inline-block;
+            margin-top: 4px;
+            padding: 7px 16px;
+            background: #1e3a5f;
+            color: #60a5fa;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 500;
+            text-align: center;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .card-link:hover { background: #2d5a8e; color: #93c5fd; }
+
+        .subsection-label {
+            font-size: 13px;
+            font-weight: 600;
+            color: #718096;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin: 24px 0 12px;
+        }
+
+        .subsection-label:first-child { margin-top: 0; }
+
+        @media (max-width: 600px) {
+            .cards { grid-template-columns: 1fr; }
+            .header h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>AI/Tech <span>Daily Trends</span></h1>
+        <div class="date">March 17, 2026 · 10:53 PDT</div>
+        <div class="source-pills"><span class="pill">Product Hunt</span><span class="pill">Toolify.ai</span><span class="pill">TAAFT</span><span class="pill">Chrome Extensions</span><span class="pill">GitHub</span><span class="pill">Hacker News</span></div>
+    </div>
+    <div class="container">
+        
+    <div class="section">
+        <div class="section-header">
+            <div class="section-icon" style="background:#1a0533">🚀</div>
+            <span class="section-title">Product Hunt</span>
+            <span class="section-count">5 items</span>
+        </div>
+        <div class="cards">
+        <div class="card">
+            <div class="card-rank">#1</div>
+            <div class="card-name">Lightning Rod: Training Data Generator</div>
+            <div class="card-desc">Turn real-world data into training datasets fast</div>
+            
+            <a class="card-link" href="https://www.producthunt.com/products/training-data-generator" target="_blank" rel="noopener">View →</a>
+        </div>
+        <div class="card">
+            <div class="card-rank">#2</div>
+            <div class="card-name">Bolt Foundry</div>
+            <div class="card-desc">Build and verify agents you can trust</div>
+            
+            <a class="card-link" href="https://www.producthunt.com/products/bolt-foundry" target="_blank" rel="noopener">View →</a>
+        </div>
+        <div class="card">
+            <div class="card-rank">#3</div>
+            <div class="card-name">Folderly</div>
+            <div class="card-desc">Get revenue from every email campaign with 99.9% inbox rate</div>
+            
+            <a class="card-link" href="https://www.producthunt.com/products/folderly" target="_blank" rel="noopener">View →</a>
+        </div>
+        <div class="card">
+            <div class="card-rank">#4</div>
+            <div class="card-name">My Computer by Manus AI</div>
+            <div class="card-desc">Automate files, apps, and workflows with Manus Desktop</div>
+            
+            <a class="card-link" href="https://www.producthunt.com/products/manus" target="_blank" rel="noopener">View →</a>
+        </div>
+        <div class="card">
+            <div class="card-rank">#5</div>
+            <div class="card-name">Ocean Orchestrator</div>
+            <div class="card-desc">Run AI jobs from your IDE with a one-click workflow</div>
+            
+            <a class="card-link" href="https://www.producthunt.com/products/ocean-orchestrator" target="_blank" rel="noopener">View →</a>
+        </div></div>
+    </div>
+    <div class="section">
+        <div class="section-header">
+            <div class="section-icon" style="background:#0a1e35">⚡</div>
+            <span class="section-title">Toolify.ai</span>
+            <span class="section-count">10 items</span>
+        </div>
+        <div class="subsection-label">Latest</div>
+<div class="cards">
+        <div class="card">
+            <div class="card-rank">#1</div>
+            <div class="card-name">Stackie.AI</div>
+            <div class="card-desc">A life logger for journaling, tracking habits, managing information, and AI-assisted learning.</div>
+            <div class="card-meta"><span class="badge badge-purple">New</span><span class="badge badge-gray">Category: Just launched</span></div>
+            <a class="card-link" href="https://www.toolify.ai/tool/stackie-ai-notes-tracker-memo-more" target="_blank" rel="noopener">View →</a>
+        </div>
+        <div class="card">
+            <div class="card-rank">#2</div>
+            <div class="card-name">IACompara</div>
+            <div class="card-desc">AI-powered energy comparator helping users save on electricity and gas bills in Spain.</div>
+            <div class="card-meta"><span class="badge badge-purple">New</span><span class="badge badge-gray">Category: Just launched</span></div>
+            <a class="card-link" href="https://www.toolify.ai/tool/iacompara" target="_blank" rel="noopener">View →</a>
+        </div>
+        <div class="card">
+            <div class="card-rank">#3</div>
+            <div class="card-name">PUNK</div>
+            <div class="card-desc">Mobile remote control for local Claude Code AI agents.</div>
+            <div class="card-meta"><span class="badge badge-purple">New</span><span class="badge badge-gray">Category: Just launched</span></div>
+            <a class="card-link" href="https://www.toolify.ai/tool/punk-remote-control-for-claude-code" target="_blank" rel="noopener">View →</a>
+        </div>
+        <div class="card">
+            <div class="card-rank">#4</div>
+            <div class="card-name">Finetuning.ai</div>
+            <div class="card-desc">AI music generator creating unique, royalty-free tracks from text descriptions in seconds.</div>
+            <div class="card-meta"><span class="badge badge-purple">New</span><span class="badge badge-gray">Category: Just launched</span></div>
+            <a class="card-link" href="https://www.toolify.ai/tool/finetuning-ai" target="_blank" rel="noopener">View →</a>
+        </div>
+        <div class="card">
+            <div class="card-rank">#5</div>
+            <div class="card-name">Loni Technology</div>
+            <div class="card-desc">AI automation agency building custom software, chatbots, and marketing solutions for business growth.</div>
+            <div class="card-meta"><span class="badge badge-purple">New</span><span class="badge badge-gray">Category: Just launched</span></div>
+            <a class="card-link" href="https://www.toolify.ai/tool/loni-technology" target="_blank" rel="noopener">View →</a>
+        </div></div>
+<div class="subsection-label">Trending</div>
+<div class="cards">
+        <div class="card">
+            <div class="card-rank">#1</div>
+            <div class="card-name">Claude 2</div>
+            <div class="card-desc">Claude is an AI assistant from Anthropic that helps with tasks via natural language.</div>
+            <div class="card-meta"><span class="badge badge-blue">📈 290.3M</span><span class="badge badge-green">↑ 43.07%</span></div>
+            <a class="card-link" href="https://www.toolify.ai/tool/claude-2" target="_blank" rel="noopener">View →</a>
+        </div>
+        <div class="card">
+            <div class="card-rank">#2</div>
+            <div class="card-name">Gemini &amp; Gemini Advanced</div>
+            <div class="card-desc">Google's personal, proactive, and powerful AI assistant.</div>
+            <div class="card-meta"><span class="badge badge-blue">📈 2.1B</span><span class="badge badge-green">↑ 2.13%</span></div>
+            <a class="card-link" href="https://www.toolify.ai/tool/gemini-gemini-advanced" target="_blank" rel="noopener">View →</a>
+        </div>
+        <div class="card">
+            <div class="card-rank">#3</div>
+            <div class="card-name">Code Arena</div>
+            <div class="card-desc">A platform to compare AI coding models and generate multi-file apps side-by-side.</div>
+            <div class="card-meta"><span class="badge badge-blue">📈 31.8M</span><span class="badge badge-green">↑ 1054.54%</span></div>
+            <a class="card-link" href="https://www.toolify.ai/tool/code-arena" target="_blank" rel="noopener">View →</a>
+        </div>
+        <div class="card">
+            <div class="card-rank">#4</div>
+            <div class="card-name">Clawdbot</div>
+            <div class="card-desc">Open-source, self-hosted AI assistant providing full system access via common chat apps like WhatsApp.</div>
+            <div class="card-meta"><span class="badge badge-blue">📈 26.4M</span><span class="badge badge-green">↑ 925.04%</span></div>
+            <a class="card-link" href="https://www.toolify.ai/tool/clawdbot" target="_blank" rel="noopener">View →</a>
+        </div>
+        <div class="card">
+            <div class="card-rank">#5</div>
+            <div class="card-name">Moltbook</div>
+            <div class="card-desc">A social network built exclusively for AI agents for sharing, discussing, and upvoting content.</div>
+            <div class="card-meta"><span class="badge badge-blue">📈 22.3M</span><span class="badge badge-green">↑ 399.67%</span></div>
+            <a class="card-link" href="https://www.toolify.ai/tool/moltbook" target="_blank" rel="noopener">View →</a>
+        </div></div>
+    </div>
+    <div class="section">
+        <div class="section-header">
+            <div class="section-icon" style="background:#0a1a2e">🤖</div>
+            <span class="section-title">There's An AI For That</span>
+            <span class="section-count">5 items</span>
+        </div>
+        <div class="cards">
+        <div class="card">
+            <div class="card-rank">#1</div>
+            <div class="card-name">Norton Neo Browser</div>
+            <div class="card-desc">The first safe AI-native browser.</div>
+            <div class="card-meta"><span class="badge badge-purple">Category: Web browsing</span></div>
+            <a class="card-link" href="https://theresanaiforthat.com/ai/norton-neo-browser/?fid=4220" target="_blank" rel="noopener">View →</a>
+        </div>
+        <div class="card">
+            <div class="card-rank">#2</div>
+            <div class="card-name">Echo Now AI</div>
+            <div class="card-desc">Intelligent Slack summaries to reclaim your day.</div>
+            <div class="card-meta"><span class="badge badge-purple">Category: Slack summaries</span></div>
+            <a class="card-link" href="https://theresanaiforthat.com/ai/echo-now-ai/?fid=2493" target="_blank" rel="noopener">View →</a>
+        </div>
+        <div class="card">
+            <div class="card-rank">#3</div>
+            <div class="card-name">NBot AI</div>
+            <div class="card-desc">Your personal AI radar that surfaces what matters</div>
+            <div class="card-meta"><span class="badge badge-purple">Category: News</span></div>
+            <a class="card-link" href="https://theresanaiforthat.com/ai/nbot-ai/?fid=4041" target="_blank" rel="noopener">View →</a>
+        </div>
+        <div class="card">
+            <div class="card-rank">#4</div>
+            <div class="card-name">DailyScope.ai</div>
+            <div class="card-desc">Automatically analyze global news patterns and themes.</div>
+            <div class="card-meta"><span class="badge badge-purple">Category: News</span></div>
+            <a class="card-link" href="https://theresanaiforthat.com/ai/dailyscope-ai/?fid=3944" target="_blank" rel="noopener">View →</a>
+        </div>
+        <div class="card">
+            <div class="card-rank">#5</div>
+            <div class="card-name">MoveAlerts.ai</div>
+            <div class="card-desc">News that moves markets, distilled instantly.</div>
+            <div class="card-meta"><span class="badge badge-purple">Category: Stock market news</span></div>
+            <a class="card-link" href="https://theresanaiforthat.com/ai/movealerts-ai/?fid=4475" target="_blank" rel="noopener">View →</a>
+        </div></div>
+    </div>
+    <div class="section">
+        <div class="section-header">
+            <div class="section-icon" style="background:#0a1a0a">🧩</div>
+            <span class="section-title">Chrome Extensions</span>
+            <span class="section-count">5 items</span>
+        </div>
+        <div class="cards">
+        <div class="card">
+            <div class="card-rank">#1</div>
+            <div class="card-name">PiP Pro: Picture-in-Picture productivity tools</div>
+            <div class="card-desc">Picture-in-Picture productivity boosting tools. Stream tab contents or take notes- always on top. Stop tab-switching, start working.</div>
+            <div class="card-meta"><span class="badge badge-blue">👥 2,000 users</span><span class="badge badge-orange">★ 4.1/5.0</span></div>
+            <a class="card-link" href="https://chromewebstore.google.com/detail/pip-pro-picture-in-pictur/jgicglkgkeagfglifmofmnongfnpbkjc" target="_blank" rel="noopener">View →</a>
+        </div>
+        <div class="card">
+            <div class="card-rank">#2</div>
+            <div class="card-name">Productivity Tools Pro</div>
+            <div class="card-desc">All-in-one productivity suite with 50+ privacy-focused tools: JSON Formatter, Pomodoro, SEO Tools, &amp; more!</div>
+            <div class="card-meta"><span class="badge badge-blue">👥 N/A</span><span class="badge badge-orange">★ 5/5.0</span></div>
+            <a class="card-link" href="https://chromewebstore.google.com/detail/productivity-tools-pro/ffjljgdcdifgkafdkkocjjckaglboela" target="_blank" rel="noopener">View →</a>
+        </div>
+        <div class="card">
+            <div class="card-rank">#3</div>
+            <div class="card-name">AI Workspace Pro - ChatGPT Prompt Manager, Sidebar &amp; Productivity Tools</div>
+            <div class="card-desc">ChatGPT prompt manager and sidebar workspace to organize prompts, chats, notes, and workflows for faster AI productivity.</div>
+            <div class="card-meta"><span class="badge badge-blue">👥 3,000 users</span><span class="badge badge-orange">★ 4.5/5.0</span></div>
+            <a class="card-link" href="https://chromewebstore.google.com/detail/ai-workspace-pro-chatgpt/mngeddjcngpcdakdhfcbaefeonmmeomg" target="_blank" rel="noopener">View →</a>
+        </div>
+        <div class="card">
+            <div class="card-rank">#4</div>
+            <div class="card-name">Seller Utilities - Productivity Tools for Amazon Sellers</div>
+            <div class="card-desc">Productivity tools for Amazon Seller Central.</div>
+            <div class="card-meta"><span class="badge badge-blue">👥 4,000 users</span><span class="badge badge-orange">★ 5/5.0</span></div>
+            <a class="card-link" href="https://chromewebstore.google.com/detail/seller-utilities-producti/giemlimlagcjbnoinmedklabpcclbapb" target="_blank" rel="noopener">View →</a>
+        </div>
+        <div class="card">
+            <div class="card-rank">#5</div>
+            <div class="card-name">CPQ Productivity Tools</div>
+            <div class="card-desc">Boost productivity on CPQ sites, currently supporting Oracle CPQ Cloud</div>
+            <div class="card-meta"><span class="badge badge-blue">👥 43 users</span><span class="badge badge-orange">★ 5/5.0</span></div>
+            <a class="card-link" href="https://chromewebstore.google.com/detail/cpq-productivity-tools/cclcmepgialdphibhiemcncjkcebopba" target="_blank" rel="noopener">View →</a>
+        </div></div>
+    </div>
+    <div class="section">
+        <div class="section-header">
+            <div class="section-icon" style="background:#1a1a0a">📦</div>
+            <span class="section-title">GitHub Trending</span>
+            <span class="section-count">5 items</span>
+        </div>
+        <div class="cards">
+        <div class="card">
+            <div class="card-rank">#1</div>
+            <div class="card-name">obra/superpowers</div>
+            <div class="card-desc">An agentic skills framework &amp; software development methodology that works.</div>
+            <div class="card-meta"><span class="badge badge-orange">⭐ 3,050 stars today</span></div>
+            <a class="card-link" href="https://github.com/obra/superpowers" target="_blank" rel="noopener">View →</a>
+        </div>
+        <div class="card">
+            <div class="card-rank">#2</div>
+            <div class="card-name">codecrafters-io/build-your-own-x</div>
+            <div class="card-desc">Master programming by recreating your favorite technologies from scratch.</div>
+            <div class="card-meta"><span class="badge badge-orange">⭐ 2,011 stars today</span></div>
+            <a class="card-link" href="https://github.com/codecrafters-io/build-your-own-x" target="_blank" rel="noopener">View →</a>
+        </div>
+        <div class="card">
+            <div class="card-rank">#3</div>
+            <div class="card-name">abhigyanpatwari/GitNexus</div>
+            <div class="card-desc">GitNexus: The Zero-Server Code Intelligence Engine - GitNexus is a client-side knowledge graph creator that runs entirely in your browser. Drop in a GitHub repo or ZIP file, and get an interactive knowledge graph wit a built in Graph RAG Agent. Perfect for code exploration</div>
+            <div class="card-meta"><span class="badge badge-orange">⭐ 1,117 stars today</span></div>
+            <a class="card-link" href="https://github.com/abhigyanpatwari/GitNexus" target="_blank" rel="noopener">View →</a>
+        </div>
+        <div class="card">
+            <div class="card-rank">#4</div>
+            <div class="card-name">langchain-ai/deepagents</div>
+            <div class="card-desc">Agent harness built with LangChain and LangGraph. Equipped with a planning tool, a filesystem backend, and the ability to spawn subagents - well-equipped to handle complex agentic tasks.</div>
+            <div class="card-meta"><span class="badge badge-orange">⭐ 1,418 stars today</span></div>
+            <a class="card-link" href="https://github.com/langchain-ai/deepagents" target="_blank" rel="noopener">View →</a>
+        </div>
+        <div class="card">
+            <div class="card-rank">#5</div>
+            <div class="card-name">jarrodwatts/claude-hud</div>
+            <div class="card-desc">A Claude Code plugin that shows what's happening - context usage, active tools, running agents, and todo progress</div>
+            <div class="card-meta"><span class="badge badge-orange">⭐ 454 stars today</span></div>
+            <a class="card-link" href="https://github.com/jarrodwatts/claude-hud" target="_blank" rel="noopener">View →</a>
+        </div></div>
+    </div>
+    <div class="section">
+        <div class="section-header">
+            <div class="section-icon" style="background:#1a0a0a">🔥</div>
+            <span class="section-title">Hacker News</span>
+            <span class="section-count">5 items</span>
+        </div>
+        <div class="cards">
+        <div class="card">
+            <div class="card-rank">#1</div>
+            <div class="card-name">Microsoft's 'unhackable' Xbox One has been hacked by 'Bliss'</div>
+            <div class="card-desc">by crtasm</div>
+            <div class="card-meta"><span class="badge badge-orange">▲ 177</span><span class="badge badge-gray">💬 80</span></div>
+            <a class="card-link" href="https://www.tomshardware.com/video-games/console-gaming/microsofts-unhackable-xbox-one-has-been-hacked-by-bliss-the-2013-console-finally-fell-to-voltage-glitching-allowing-the-loading-of-unsigned-code-at-every-level" target="_blank" rel="noopener">View →</a>
+        </div>
+        <div class="card">
+            <div class="card-rank">#2</div>
+            <div class="card-name">Kagi Small Web</div>
+            <div class="card-desc">by trueduke</div>
+            <div class="card-meta"><span class="badge badge-orange">▲ 560</span><span class="badge badge-gray">💬 151</span></div>
+            <a class="card-link" href="https://kagi.com/smallweb/" target="_blank" rel="noopener">View →</a>
+        </div>
+        <div class="card">
+            <div class="card-rank">#3</div>
+            <div class="card-name">Node.js needs a virtual file system</div>
+            <div class="card-desc">by voctor</div>
+            <div class="card-meta"><span class="badge badge-orange">▲ 96</span><span class="badge badge-gray">💬 86</span></div>
+            <a class="card-link" href="https://blog.platformatic.dev/why-nodejs-needs-a-virtual-file-system" target="_blank" rel="noopener">View →</a>
+        </div>
+        <div class="card">
+            <div class="card-rank">#4</div>
+            <div class="card-name">OpenSUSE Kalpa</div>
+            <div class="card-desc">by ogogmad</div>
+            <div class="card-meta"><span class="badge badge-orange">▲ 80</span><span class="badge badge-gray">💬 42</span></div>
+            <a class="card-link" href="https://kalpadesktop.org/" target="_blank" rel="noopener">View →</a>
+        </div>
+        <div class="card">
+            <div class="card-rank">#5</div>
+            <div class="card-name">Finding a CPU Design Bug in the Xbox 360 (2018)</div>
+            <div class="card-desc">by mariuz</div>
+            <div class="card-meta"><span class="badge badge-orange">▲ 111</span><span class="badge badge-gray">💬 26</span></div>
+            <a class="card-link" href="https://randomascii.wordpress.com/2018/01/07/finding-a-cpu-design-bug-in-the-xbox-360/" target="_blank" rel="noopener">View →</a>
+        </div></div>
+    </div>
+    </div>
+</body>
+</html>

@@ -53,13 +53,13 @@ def generate_html_report(
         }
 
         .header h1 {
-            font-size: 28px;
+            font-size: 3rem;
             font-weight: 700;
             color: #fff;
             letter-spacing: -0.5px;
         }
 
-        .header h1 span { color: #7c3aed; }
+        .header h1 span { color: #60a5fa; }
 
         .header .date {
             margin-top: 8px;
@@ -150,7 +150,7 @@ def generate_html_report(
         .card-rank {
             font-size: 11px;
             font-weight: 600;
-            color: #7c3aed;
+            color: #60a5fa;
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
@@ -180,7 +180,7 @@ def generate_html_report(
             font-weight: 500;
         }
 
-        .badge-purple { background: #2d1b69; color: #a78bfa; }
+        .badge-purple { background: #1e3a5f; color: #60a5fa; }
         .badge-green  { background: #14532d; color: #86efac; }
         .badge-blue   { background: #1e3a5f; color: #93c5fd; }
         .badge-orange { background: #431407; color: #fb923c; }
@@ -190,17 +190,17 @@ def generate_html_report(
             display: inline-block;
             margin-top: 4px;
             padding: 7px 16px;
-            background: #2d3748;
-            color: #e2e8f0;
+            background: #1e3a5f;
+            color: #60a5fa;
             text-decoration: none;
             border-radius: 8px;
             font-size: 13px;
             font-weight: 500;
             text-align: center;
-            transition: background 0.2s;
+            transition: background 0.2s, color 0.2s;
         }
 
-        .card-link:hover { background: #4a5568; }
+        .card-link:hover { background: #2d5a8e; color: #93c5fd; }
 
         .subsection-label {
             font-size: 13px;
@@ -334,7 +334,7 @@ def generate_html_report(
     # ── Assemble page ─────────────────────────────────────────────────────────
     sections_html = (
         section("🚀", "#1a0533", "Product Hunt", ph_html, len(product_hunt_data))
-        + section("⚡", "#1a0a2e", "Toolify.ai", toolify_html, toolify_count)
+        + section("⚡", "#0a1e35", "Toolify.ai", toolify_html, toolify_count)
         + section("🤖", "#0a1a2e", "There's An AI For That", taaft_html, len(ai_tools_data))
         + section("🧩", "#0a1a0a", "Chrome Extensions", chrome_html, len(chrome_extensions_data))
         + section("📦", "#1a1a0a", "GitHub Trending", gh_html, len(github_trending_data))
