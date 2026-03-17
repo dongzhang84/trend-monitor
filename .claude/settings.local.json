@@ -4,7 +4,10 @@
       "Bash(python3:*)",
       "WebFetch(domain:theresanaiforthat.com)",
       "WebFetch(domain:chrome.google.com)",
-      "WebFetch(domain:chromewebstore.google.com)"
+      "WebFetch(domain:chromewebstore.google.com)",
+      "WebFetch(domain:www.toolify.ai)",
+      "Bash(curl:*)",
+      "Bash(pip3 list:*)"
     ]
   }
 }

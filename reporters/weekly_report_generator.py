@@ -68,6 +68,7 @@ def _generate_overview(insights):
 
     source_names = {
         "product_hunt": "Product Hunt",
+        "toolify": "Toolify Trending",
         "ai_tools": "AI 工具",
         "chrome_extensions": "Chrome 扩展",
         "github_trending": "GitHub 项目",
@@ -127,6 +128,7 @@ def _generate_repeated_section(insights):
 
     source_config = [
         ("product_hunt", "Product Hunt", "tagline"),
+        ("toolify", "Toolify Trending", "description"),
         ("ai_tools", "AI 工具", "description"),
         ("chrome_extensions", "Chrome 扩展", "description"),
         ("github_trending", "GitHub 项目", "description"),
@@ -200,6 +202,7 @@ def _generate_new_discoveries_section(insights):
 
     source_config = [
         ("product_hunt", "Product Hunt", "tagline"),
+        ("toolify", "Toolify Trending", "description"),
         ("ai_tools", "AI 工具", "description"),
         ("chrome_extensions", "Chrome 扩展", "description"),
         ("github_trending", "GitHub 项目", "description"),
@@ -254,6 +257,7 @@ def _generate_statistics_section(insights):
 
     source_names = {
         "product_hunt": "Product Hunt",
+        "toolify": "Toolify Trending",
         "ai_tools": "AI 工具",
         "chrome_extensions": "Chrome 扩展",
         "github_trending": "GitHub 项目",
@@ -307,7 +311,12 @@ def _get_description(item, desc_field):
 
 def _get_extra_info(source_key, item):
     """获取数据源特定的额外信息"""
-    if source_key == "chrome_extensions":
+    if source_key == "toolify":
+        monthly_visit = item.get("monthly_visit", "")
+        growth_rate = item.get("growth_rate", "")
+        if monthly_visit or growth_rate:
+            return f"月访问量: {monthly_visit} | 增长率: {growth_rate}"
+    elif source_key == "chrome_extensions":
         users = item.get("users", "")
         rating = item.get("rating", "")
         if users or rating:

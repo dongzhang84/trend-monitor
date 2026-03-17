@@ -4,7 +4,7 @@ from datetime import datetime
 from zoneinfo import ZoneInfo
 
 
-def generate_markdown_report(repos, products, hackernews_posts, ai_tools=None, chrome_extensions=None):
+def generate_markdown_report(repos, products, hackernews_posts, ai_tools=None, chrome_extensions=None, toolify_tools=None):
     """生成Markdown格式的报告"""
     pst = ZoneInfo("America/Los_Angeles")
     now = datetime.now(pst)
@@ -28,6 +28,35 @@ def generate_markdown_report(repos, products, hackernews_posts, ai_tools=None, c
             lines.append("")
             lines.append(f"- **简介**: {product['tagline']}")
             lines.append("")
+    else:
+        lines.append("*暂无数据*")
+        lines.append("")
+
+    lines.append("---")
+    lines.append("")
+    lines.append("## Toolify - AI 工具")
+    lines.append("")
+
+    new_tools = toolify_tools.get("new", []) if isinstance(toolify_tools, dict) else []
+    trending_tools = toolify_tools.get("trending", []) if isinstance(toolify_tools, dict) else []
+
+    lines.append("### 最新上线")
+    lines.append("")
+    if new_tools:
+        for i, tool in enumerate(new_tools, 1):
+            lines.append(f"{i}. **[{tool['name']}]({tool['link']})** - {tool['description']}")
+        lines.append("")
+    else:
+        lines.append("*暂无数据*")
+        lines.append("")
+
+    lines.append("### Trending 榜单")
+    lines.append("")
+    if trending_tools:
+        for i, tool in enumerate(trending_tools, 1):
+            lines.append(f"{i}. **[{tool['name']}]({tool['link']})** - {tool['description']}")
+            lines.append(f"   - 月访问量: {tool['monthly_visit']} | 增长率: {tool['growth_rate']}")
+        lines.append("")
     else:
         lines.append("*暂无数据*")
         lines.append("")

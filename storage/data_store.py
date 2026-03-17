@@ -35,6 +35,7 @@ def save_daily_data(date, data):
             "date": date,
             "timestamp": timestamp,
             "product_hunt": data.get("product_hunt", []),
+            "toolify": data.get("toolify", []),
             "ai_tools": data.get("ai_tools", []),
             "chrome_extensions": data.get("chrome_extensions", []),
             "github_trending": data.get("github_trending", []),

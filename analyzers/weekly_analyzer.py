@@ -23,6 +23,7 @@ STOP_WORDS = {
 # 数据源名称映射
 SOURCE_NAMES = [
     "product_hunt",
+    "toolify",
     "ai_tools",
     "chrome_extensions",
     "github_trending",
@@ -51,6 +52,7 @@ def load_weekly_data(days=7):
     result = {
         "dates": [],
         "product_hunt": [],
+        "toolify": [],
         "ai_tools": [],
         "chrome_extensions": [],
         "github_trending": [],
