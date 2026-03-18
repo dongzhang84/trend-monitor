@@ -15,9 +15,10 @@ AI/Tech 趋势监控工具，自动采集热点数据，生成日报和周报，
 - reporters/：报告生成
 - senders/：邮件发送
 - storage/：数据持久化
-- analyzers/：周报数据分析
+- analyzers/：数据分析模块（周报分析 + indie机会分析）
 - data/daily/：每日采集的原始数据JSON
 - reports/weekly/：生成的周报
+- analysis/daily/：每日 indie 机会分析报告（{date}-indie.md）
 
 ## 数据源（按优先级）
 1. Product Hunt
@@ -38,6 +39,15 @@ AI/Tech 趋势监控工具，自动采集热点数据，生成日报和周报，
 - HTML 报告生成到 docs/index.html，由 GitHub Pages 提供访问；daily workflow 每次运行后自动 commit+push
 - workflow commit 用 [skip ci] 防止无限循环触发
 - collectors 函数名：fetch_product_hunt_posts, fetch_trending_repos, fetch_hackernews_posts（不是 fetch_product_hunt/fetch_github_trending/fetch_hackernews）
+
+## Indie 分析模块（2026-03-18 新增）
+- `analyzers/indie_analyzer.py` — 主模块，三个公开函数：`filter_unsuitable_products`, `score_product`, `generate_indie_report`
+- 过滤逻辑：B2B关键词、复合短语（analytics+team）、GitHub库检测（npm install等）
+- 领域检测：14个领域表，读 name+description（不用tags），驱动8个问题的个性化回答
+- 8问框架：用户是谁 / 为什么需要 / 如何找用户 / 商业模式 / 关键洞察 / 一句话Pitch / 能否独立开发 / 如何获客 + 💡第一步行动
+- 输出：`analysis/daily/{date}-indie.md`，由 daily workflow 自动 commit
+- main.py 集成位置：HTML生成之后、邮件发送之前
+- 注意：`generate_indie_report` 的 toolify_data 参数接受 dict({'new':[], 'trending':[]}) 或 list，内部自动处理
 
 ## 开发规则
 - 每次修改后跑测试确认不破坏已有功能

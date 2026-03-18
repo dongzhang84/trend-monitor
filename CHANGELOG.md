@@ -5,6 +5,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.4.0] - 2026-03-18
+
+### Added
+- **Indie hacker opportunity analysis** — new daily report generated alongside the main digest
+- `analyzers/indie_analyzer.py` with three core functions:
+  - `filter_unsuitable_products()` — removes B2B, complex, institutional, and GitHub library products using keyword + compound-phrase detection
+  - `score_product()` — scores each product 1–5 on tech difficulty, user acquisition, revenue potential, and indie-friendliness (max 20)
+  - `generate_indie_report()` — produces a full markdown report with three sections: filtered-out table, quick-score table, and top-5 deep-dive
+- **8-question deep-dive framework** per top product: Who are the users? Why do they need it? Distribution? Revenue model? Key learnings? One-sentence pitch? Can I build it? How do I find users? Plus a "💡 First Step" action recommendation
+- Domain detection table (14 domains) that reads actual product name + description to drive product-specific answers (e.g. fortune-telling → r/astrology outreach, not generic advice)
+- `analysis/daily/{date}-indie.md` output file created on every run
+- GitHub Actions daily workflow now auto-commits `analysis/daily/*.md`
+
+### Changed
+- `main.py` generates indie analysis after HTML report, before email sending
+- Daily workflow commit message updated to mention indie analysis
+
 ## [1.3.1] - 2026-03-17
 
 ### Added

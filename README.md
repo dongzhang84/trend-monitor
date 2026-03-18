@@ -17,6 +17,7 @@ The dashboard updates automatically every morning via GitHub Actions. Dark theme
 
 - **Multi-source Aggregation** - Collects data from 6 sources: Product Hunt, Toolify.ai, There's An AI For That, Chrome Extensions, GitHub, Hacker News
 - **Web Dashboard** - Live HTML report at GitHub Pages, dark theme, responsive card layout, auto-updated daily
+- **Indie Opportunity Analysis** - Daily report scoring products for solo-builder viability with an 8-question deep-dive per top pick
 - **Automated Reports** - Generates Markdown reports and HTML dashboard on every run
 - **Weekly Reports** - Automated weekly summaries with trend analysis every Sunday 22:00 PST
 - **Email Delivery** - Sends formatted HTML emails directly to your inbox
@@ -121,12 +122,13 @@ python main.py --no-email
 
 ### Output
 
-The script generates two files on every run:
+The script generates three files on every run:
 
 | File | Description |
 |------|-------------|
 | `report.md` | Markdown report (local reference) |
 | `docs/index.html` | Dark-theme HTML dashboard (published to GitHub Pages) |
+| `analysis/daily/{date}-indie.md` | Indie hacker opportunity analysis (auto-committed by CI) |
 
 ## GitHub Actions Setup
 
@@ -215,6 +217,44 @@ python weekly_report.py --days 14
 
 Reports are saved to `reports/weekly/weekly-YYYY-MM-DD.md`
 
+## Indie Opportunity Analysis
+
+Every daily run generates `analysis/daily/{date}-indie.md` — a report designed for solo builders evaluating whether a trending product represents a replicable opportunity.
+
+### How it works
+
+1. **Filter** — removes B2B products (enterprise, churn, SSO, CRM), overly complex domains (blockchain, hardware), institutional tools, and GitHub libraries (detected by install commands like `npm install`)
+2. **Score** — rates each remaining product 1–5 on four dimensions:
+   - `tech_difficulty` — how hard is it to build?
+   - `user_acquisition` — how naturally does it spread?
+   - `revenue_potential` — how monetisable is the niche?
+   - `indie_friendly` — can a solo developer ship and maintain it?
+3. **Deep-dive** — the top 5 products each get an 8-question analysis:
+
+| # | Question |
+|---|----------|
+| 1 | Who are the users? (persona + B2C/B2B) |
+| 2 | Why do they need it? (pain point + product's own words) |
+| 3 | How does it find users? (distribution channel) |
+| 4 | Does it make money? How much? (model + revenue estimate) |
+| 5 | What can I learn? (positioning insights) |
+| 6 | One-sentence pitch |
+| 7 | Can I build it? (technical feasibility) |
+| 8 | How do I find users? (specific tactics) |
+
+Each analysis ends with a **💡 First Step** — one concrete action to validate or start building.
+
+### Domain awareness
+
+The analyzer detects 14 product domains from the actual description (fortune telling, browser extension, image generation, developer tool, productivity, etc.) and tailors every answer to that domain — rather than generating generic advice.
+
+### Reports location
+
+```
+analysis/daily/
+└── 2026-03-18-indie.md   ← auto-committed by GitHub Actions daily
+```
+
 ## Project Structure
 
 ```
@@ -250,9 +290,10 @@ trend-monitor/
 │   ├── __init__.py
 │   └── data_store.py
 │
-├── analyzers/             # Weekly analysis
+├── analyzers/             # Analysis modules
 │   ├── __init__.py
-│   └── weekly_analyzer.py
+│   ├── weekly_analyzer.py
+│   └── indie_analyzer.py  # Indie opportunity scoring & deep-dive
 │
 ├── data/                  # Daily data storage
 │   └── daily/
@@ -260,6 +301,10 @@ trend-monitor/
 │
 ├── docs/                  # GitHub Pages output
 │   └── index.html         # HTML dashboard (auto-updated daily)
+│
+├── analysis/              # Indie opportunity analysis
+│   └── daily/
+│       └── YYYY-MM-DD-indie.md
 │
 ├── reports/               # Generated reports
 │   └── weekly/
