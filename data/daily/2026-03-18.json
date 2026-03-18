@@ -1,0 +1,231 @@
+{
+  "date": "2026-03-18",
+  "timestamp": "2026-03-18T09:00:31.825047-07:00",
+  "product_hunt": [
+    {
+      "name": "Lightfield",
+      "tagline": "AI-native CRM that builds itself and does work for you",
+      "link": "https://www.producthunt.com/products/lightfield"
+    },
+    {
+      "name": "Banyan AI Lite",
+      "tagline": "AI detecting & preventing SaaS churn",
+      "link": "https://www.producthunt.com/products/banyan-ai-lite"
+    },
+    {
+      "name": "Forvibe for macOS",
+      "tagline": "Everything between your build and the App Store",
+      "link": "https://www.producthunt.com/products/forvibe"
+    },
+    {
+      "name": "GPT‑5.4 mini and nano",
+      "tagline": "Fast and efficient models optimized for coding and subagents",
+      "link": "https://www.producthunt.com/products/openai"
+    },
+    {
+      "name": "Comet for Enterprise",
+      "tagline": "Perplexity’s Secure AI browser built for enterprise teams",
+      "link": "https://www.producthunt.com/products/perplexity-ai"
+    }
+  ],
+  "toolify": [
+    {
+      "name": "Stackie.AI",
+      "description": "A life logger for journaling, tracking habits, managing information, and AI-assisted learning.",
+      "category": "Just launched",
+      "link": "https://www.toolify.ai/tool/stackie-ai-notes-tracker-memo-more"
+    },
+    {
+      "name": "Photo Video AI",
+      "description": "AI tool that transforms static photos into professional cinematic videos in seconds.",
+      "category": "Just launched",
+      "link": "https://www.toolify.ai/tool/photo-ai-video-generator"
+    },
+    {
+      "name": "HelloGPT",
+      "description": "AI translation assistant for cross-border e-commerce and multi-platform social management.",
+      "category": "Just launched",
+      "link": "https://www.toolify.ai/tool/hellogpt"
+    },
+    {
+      "name": "Template.net",
+      "description": "AI generator for fully editable, production-ready branded documents and professional assets.",
+      "category": "Just launched",
+      "link": "https://www.toolify.ai/tool/template-net"
+    },
+    {
+      "name": "FateTell",
+      "description": "AI fortune teller using Eastern wisdom for personalized life destiny and Bazi analysis.",
+      "category": "Just launched",
+      "link": "https://www.toolify.ai/tool/fatetell"
+    },
+    {
+      "name": "Claude 2",
+      "description": "Claude is an AI assistant from Anthropic that helps with tasks via natural language.",
+      "monthly_visit": "290.3M",
+      "growth_rate": "43.07%",
+      "link": "https://www.toolify.ai/tool/claude-2"
+    },
+    {
+      "name": "Gemini & Gemini Advanced",
+      "description": "Google's personal, proactive, and powerful AI assistant.",
+      "monthly_visit": "2.1B",
+      "growth_rate": "2.13%",
+      "link": "https://www.toolify.ai/tool/gemini-gemini-advanced"
+    },
+    {
+      "name": "Code Arena",
+      "description": "A platform to compare AI coding models and generate multi-file apps side-by-side.",
+      "monthly_visit": "31.8M",
+      "growth_rate": "1054.54%",
+      "link": "https://www.toolify.ai/tool/code-arena"
+    },
+    {
+      "name": "Clawdbot",
+      "description": "Open-source, self-hosted AI assistant providing full system access via common chat apps like WhatsApp.",
+      "monthly_visit": "26.4M",
+      "growth_rate": "925.04%",
+      "link": "https://www.toolify.ai/tool/clawdbot"
+    },
+    {
+      "name": "Moltbook",
+      "description": "A social network built exclusively for AI agents for sharing, discussing, and upvoting content.",
+      "monthly_visit": "22.3M",
+      "growth_rate": "399.67%",
+      "link": "https://www.toolify.ai/tool/moltbook"
+    }
+  ],
+  "ai_tools": [
+    {
+      "name": "Norton Neo Browser",
+      "description": "The first safe AI-native browser.",
+      "category": "Web browsing",
+      "link": "https://theresanaiforthat.com/ai/norton-neo-browser/?fid=4220"
+    },
+    {
+      "name": "Echo Now AI",
+      "description": "Intelligent Slack summaries to reclaim your day.",
+      "category": "Slack summaries",
+      "link": "https://theresanaiforthat.com/ai/echo-now-ai/?fid=2493"
+    },
+    {
+      "name": "NBot AI",
+      "description": "Your personal AI radar that surfaces what matters",
+      "category": "News",
+      "link": "https://theresanaiforthat.com/ai/nbot-ai/?fid=4041"
+    },
+    {
+      "name": "DailyScope.ai",
+      "description": "Automatically analyze global news patterns and themes.",
+      "category": "News",
+      "link": "https://theresanaiforthat.com/ai/dailyscope-ai/?fid=3944"
+    },
+    {
+      "name": "MoveAlerts.ai",
+      "description": "News that moves markets, distilled instantly.",
+      "category": "Stock market news",
+      "link": "https://theresanaiforthat.com/ai/movealerts-ai/?fid=4475"
+    }
+  ],
+  "chrome_extensions": [
+    {
+      "name": "QuestionAI Homework Powered AI Assistant",
+      "description": "AI Copilot can answer screenshot queries and assist with writing, summarizing, translating, and grammar checking.",
+      "users": "100,000 users",
+      "rating": "4.8/5.0",
+      "link": "https://chromewebstore.google.com/detail/questionai-homework-power/hajphibbdloomfdkeoejchiikjggnaif"
+    },
+    {
+      "name": "Monica: All-In-One AI Assist & Smartest  AI Agent",
+      "description": "One stop AI Assistant with GPT, Claude, Gemini: Chat, Write, Translate, Search, Summarize, image generator, video generation",
+      "users": "3,000,000 users",
+      "rating": "4.9/5.0",
+      "link": "https://chromewebstore.google.com/detail/monica-all-in-one-ai-assi/ofpnmcalabcbjgholdjcjblkibolbppb"
+    },
+    {
+      "name": "Voila – AI Assistant, Copilot and AI Writer",
+      "description": "Seamless personal AI assistant powered by GPT-5 to help you create, write, summarize, brainstorm, and research on any website.",
+      "users": "80,000 users",
+      "rating": "4.7/5.0",
+      "link": "https://chromewebstore.google.com/detail/voila-%E2%80%93-ai-assistant-copi/cakobppopkpmmglabcdcklncbckjpkcl"
+    },
+    {
+      "name": "AI Assistant",
+      "description": "AI Assistant helps you answer question, summarize and explain pages and texts!",
+      "users": "1,000 users",
+      "rating": "3/5.0",
+      "link": "https://chromewebstore.google.com/detail/ai-assistant/manahiemhgolofngagbjjefiibejhcgm"
+    },
+    {
+      "name": "ChatGPT Assistant - Use AI Everywhere",
+      "description": "Use ChatGPT in search engines, to write emails, and on any website",
+      "users": "10,000 users",
+      "rating": "3.7/5.0",
+      "link": "https://chromewebstore.google.com/detail/chatgpt-assistant-use-ai/kldepdcdedfibmjnggmolhffdddbphjg"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "jarrodwatts/claude-hud",
+      "description": "A Claude Code plugin that shows what's happening - context usage, active tools, running agents, and todo progress",
+      "today_stars": "1,040 stars today"
+    },
+    {
+      "name": "obra/superpowers",
+      "description": "An agentic skills framework & software development methodology that works.",
+      "today_stars": "4,091 stars today"
+    },
+    {
+      "name": "unslothai/unsloth",
+      "description": "Unified web UI for training and running open models like Qwen, DeepSeek, and Gemma locally.",
+      "today_stars": "975 stars today"
+    },
+    {
+      "name": "newton-physics/newton",
+      "description": "An open-source, GPU-accelerated physics simulation engine built upon NVIDIA Warp, specifically targeting roboticists and simulation researchers.",
+      "today_stars": "20 stars today"
+    },
+    {
+      "name": "shadps4-emu/shadPS4",
+      "description": "PlayStation 4 emulator for Windows, Linux and macOS written in C++",
+      "today_stars": "683 stars today"
+    }
+  ],
+  "hacker_news": [
+    {
+      "title": "Rob Pike's 5 Rules of Programming",
+      "author": "vismit2000",
+      "score": 500,
+      "comments": 272,
+      "url": "https://www.cs.unc.edu/~stotts/COMP590-059-f24/robsrules.html"
+    },
+    {
+      "title": "Nightingale – open-source karaoke app that works with any song on your computer",
+      "author": "rzzzzru",
+      "score": 338,
+      "comments": 71,
+      "url": "https://nightingale.cafe/"
+    },
+    {
+      "title": "Machine Payments Protocol (MPP)",
+      "author": "bpierre",
+      "score": 8,
+      "comments": 5,
+      "url": "https://stripe.com/blog/machine-payments-protocol"
+    },
+    {
+      "title": "Pandas Exercises for Data Analysis (Interactive)",
+      "author": "selva86",
+      "score": 98,
+      "comments": 23,
+      "url": "https://machinelearningplus.com/python/101-pandas-exercises-python-interactive/"
+    },
+    {
+      "title": "Federal Cyber Experts Called Microsoft's Cloud \"A Pile of Shit\", yet Approved It",
+      "author": "hn_acker",
+      "score": 122,
+      "comments": 59,
+      "url": "https://www.propublica.org/article/microsoft-cloud-fedramp-cybersecurity-government"
+    }
+  ]
+}
