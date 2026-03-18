@@ -67,6 +67,26 @@ def generate_html_report(
             color: #718096;
         }
 
+        .header-nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 12px;
+        }
+
+        .header-nav a {
+            display: inline-block;
+            padding: 6px 18px;
+            background: #1e3a5f;
+            color: #60a5fa;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+
+        .header-nav a:hover { background: #2d5a8e; }
+
         .source-pills {
             display: flex;
             justify-content: center;
@@ -358,6 +378,7 @@ def generate_html_report(
     <div class="header">
         <h1>AI/Tech <span>Daily Trends</span></h1>
         <div class="date">{date_str}</div>
+        <div class="header-nav"><a href="indie.html">View Indie Opportunities →</a></div>
         <div class="source-pills">{source_pills}</div>
     </div>
     <div class="container">

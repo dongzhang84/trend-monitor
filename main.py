@@ -11,6 +11,7 @@ from collectors.toolify import fetch_toolify_tools
 from reporters import generate_markdown_report
 from reporters.html_generator import generate_html_report
 from analyzers.indie_analyzer import generate_indie_report
+from analyzers.indie_html_generator import generate_indie_html
 from senders import send_email_report
 from storage import save_daily_data
 
@@ -117,6 +118,20 @@ def main():
     with open(indie_path, "w", encoding="utf-8") as f:
         f.write(indie_report)
     print(f"✅ Indie analysis saved to {indie_path}")
+
+    # 生成 Indie HTML 报告
+    indie_product_data = {
+        "product_hunt": product_hunt_data,
+        "toolify": toolify_data,
+        "ai_tools": ai_tools_data,
+        "chrome_extensions": chrome_extensions_data,
+        "github": github_trending_data,
+        "hackernews": hackernews_data,
+    }
+    indie_html = generate_indie_html(indie_report, indie_product_data)
+    with open("docs/indie.html", "w", encoding="utf-8") as f:
+        f.write(indie_html)
+    print("✅ Indie HTML saved to docs/indie.html")
 
     # 发送邮件
     if not args.no_email:
