@@ -93,6 +93,29 @@ def _score_bar(value, max_val=5):
     )
 
 
+def _product_url(product):
+    """Return the best URL for a product, constructing GitHub URLs from repo name."""
+    source = product.get("_source", "")
+    if source == "github":
+        name = product.get("name", "")
+        return f"https://github.com/{name}" if name else ""
+    return (
+        product.get("link")
+        or product.get("url")
+        or product.get("website")
+        or ""
+    )
+
+
+def _link_label(source):
+    """Return appropriate button label for a given source."""
+    if source == "github":
+        return "View on GitHub →"
+    if source == "hackernews":
+        return "View on HN →"
+    return "Visit Product →"
+
+
 def _score_color(total):
     """Return a CSS class name based on total score."""
     if total >= 16:
@@ -481,7 +504,13 @@ def generate_indie_html(indie_report_markdown, product_data):
     score_rows = "".join(
         f"""<tr>
             <td data-val="{i}">{i}</td>
-            <td>{_e(p.get("name") or p.get("title") or "Unknown")}</td>
+            <td>{
+                (lambda u, n: f'<a href="{_e(u)}" target="_blank" rel="noopener" style="color:#60a5fa;text-decoration:none">{_e(n)}</a>'
+                 if u else _e(n))(
+                    _product_url(p),
+                    p.get("name") or p.get("title") or "Unknown"
+                )
+            }</td>
             <td><span class="source-tag">{_e(p.get("_source","?"))}</span></td>
             <td data-val="{p['_scores']['tech_difficulty']}">{_score_bar(p['_scores']['tech_difficulty'])}</td>
             <td data-val="{p['_scores']['user_acquisition']}">{_score_bar(p['_scores']['user_acquisition'])}</td>
@@ -520,13 +549,17 @@ def generate_indie_html(indie_report_markdown, product_data):
 
         name = parsed["name"] or product.get("name") or product.get("title") or "Unknown"
         desc = parsed["description"] or product.get("description") or product.get("tagline") or ""
-        url = parsed["url"] or product.get("url") or product.get("link") or ""
         source = parsed["source"] or product.get("_source", "")
+        url = _product_url(product) or parsed["url"]
 
-        link_html = (
-            f'<a class="card-link" href="{_e(url)}" target="_blank" rel="noopener">View →</a>'
-            if url else ""
-        )
+        if url:
+            link_html = (
+                f'<a class="card-link" href="{_e(url)}" target="_blank" rel="noopener">'
+                f'{_link_label(source)}'
+                f'</a>'
+            )
+        else:
+            link_html = '<span style="font-size:12px;color:#4a5568">URL not available</span>'
 
         # Score badges for header
         badges_html = (
