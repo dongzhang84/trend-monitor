@@ -1,31 +1,31 @@
 {
   "date": "2026-03-18",
-  "timestamp": "2026-03-18T09:00:31.825047-07:00",
+  "timestamp": "2026-03-18T15:48:44.671354-07:00",
   "product_hunt": [
+    {
+      "name": "ClipLedger",
+      "tagline": "Track views & payouts for YouTube Shorts creators",
+      "link": "https://www.producthunt.com/products/clipledger"
+    },
+    {
+      "name": "MetricMap",
+      "tagline": "Track revenue, ads, web vitals, & user insights in one hub",
+      "link": "https://www.producthunt.com/products/metricmap-analytics-for-saas-e-com"
+    },
     {
       "name": "Lightfield",
       "tagline": "AI-native CRM that builds itself and does work for you",
       "link": "https://www.producthunt.com/products/lightfield"
     },
     {
-      "name": "Banyan AI Lite",
-      "tagline": "AI detecting & preventing SaaS churn",
-      "link": "https://www.producthunt.com/products/banyan-ai-lite"
+      "name": "Bookshelf for NotebookLM",
+      "tagline": "Add folders, search, and sync to Google NotebookLM",
+      "link": "https://www.producthunt.com/products/bookshelf-for-notebooklm"
     },
     {
-      "name": "Forvibe for macOS",
-      "tagline": "Everything between your build and the App Store",
-      "link": "https://www.producthunt.com/products/forvibe"
-    },
-    {
-      "name": "GPT‑5.4 mini and nano",
-      "tagline": "Fast and efficient models optimized for coding and subagents",
-      "link": "https://www.producthunt.com/products/openai"
-    },
-    {
-      "name": "Comet for Enterprise",
-      "tagline": "Perplexity’s Secure AI browser built for enterprise teams",
-      "link": "https://www.producthunt.com/products/perplexity-ai"
+      "name": "Claude Dispatch",
+      "tagline": "Text Claude from your phone using “Dispatch”",
+      "link": "https://www.producthunt.com/products/claude"
     }
   ],
   "toolify": [
@@ -129,39 +129,39 @@
   ],
   "chrome_extensions": [
     {
-      "name": "QuestionAI Homework Powered AI Assistant",
-      "description": "AI Copilot can answer screenshot queries and assist with writing, summarizing, translating, and grammar checking.",
-      "users": "100,000 users",
-      "rating": "4.8/5.0",
-      "link": "https://chromewebstore.google.com/detail/questionai-homework-power/hajphibbdloomfdkeoejchiikjggnaif"
-    },
-    {
-      "name": "Monica: All-In-One AI Assist & Smartest  AI Agent",
-      "description": "One stop AI Assistant with GPT, Claude, Gemini: Chat, Write, Translate, Search, Summarize, image generator, video generation",
-      "users": "3,000,000 users",
-      "rating": "4.9/5.0",
-      "link": "https://chromewebstore.google.com/detail/monica-all-in-one-ai-assi/ofpnmcalabcbjgholdjcjblkibolbppb"
-    },
-    {
-      "name": "Voila – AI Assistant, Copilot and AI Writer",
-      "description": "Seamless personal AI assistant powered by GPT-5 to help you create, write, summarize, brainstorm, and research on any website.",
-      "users": "80,000 users",
-      "rating": "4.7/5.0",
-      "link": "https://chromewebstore.google.com/detail/voila-%E2%80%93-ai-assistant-copi/cakobppopkpmmglabcdcklncbckjpkcl"
-    },
-    {
-      "name": "AI Assistant",
-      "description": "AI Assistant helps you answer question, summarize and explain pages and texts!",
-      "users": "1,000 users",
-      "rating": "3/5.0",
-      "link": "https://chromewebstore.google.com/detail/ai-assistant/manahiemhgolofngagbjjefiibejhcgm"
-    },
-    {
-      "name": "ChatGPT Assistant - Use AI Everywhere",
-      "description": "Use ChatGPT in search engines, to write emails, and on any website",
+      "name": "WA WorkFlow",
+      "description": "Enhance your WhatsApp experience by incorporating additional tools for WhatsApp Web that prioritize security and reliability.",
       "users": "10,000 users",
-      "rating": "3.7/5.0",
-      "link": "https://chromewebstore.google.com/detail/chatgpt-assistant-use-ai/kldepdcdedfibmjnggmolhffdddbphjg"
+      "rating": "4.6/5.0",
+      "link": "https://chromewebstore.google.com/detail/wa-workflow/gjpbfemadlcjhmadmmamocpapdacpmci"
+    },
+    {
+      "name": "N8N Master - Workflow Assistant",
+      "description": "AI assistant for n8n workflow automation. Works with self-hosted instances, AI APIs (OpenAI, Anthropic) and templates",
+      "users": "6,000 users",
+      "rating": "4.6/5.0",
+      "link": "https://chromewebstore.google.com/detail/n8n-master-workflow-assis/jikahkldllpmocjlfcmjkpecjjipbfmj"
+    },
+    {
+      "name": "Synapse Pathology Workflow Extension",
+      "description": "Closes orphaned tabs opened to launch to a Synapse Pathology scan and manages dual monitor support",
+      "users": "50,000 users",
+      "rating": "0/5.0",
+      "link": "https://chromewebstore.google.com/detail/synapse-pathology-workflo/ebebhcbgfncogpjfggdllochjmlhnnjk"
+    },
+    {
+      "name": "Workflow Auto-Save",
+      "description": "Automatically saves workflows",
+      "users": "148 users",
+      "rating": "5/5.0",
+      "link": "https://chromewebstore.google.com/detail/workflow-auto-save/kngogheoaailmafbolhbphlchklpdkia"
+    },
+    {
+      "name": "Apache KIE™ Serverless Workflow Editor for GitHub",
+      "description": "Visualize and edit Serverless Workflow files using a graphical editor on GitHub",
+      "users": "234 users",
+      "rating": "5/5.0",
+      "link": "https://chromewebstore.google.com/detail/apache-kie-serverless-wor/ijamhkegfogkfnmfnfkjdiadomlphfej"
     }
   ],
   "github_trending": [
@@ -177,7 +177,7 @@
     },
     {
       "name": "unslothai/unsloth",
-      "description": "Unified web UI for training and running open models like Qwen, DeepSeek, and Gemma locally.",
+      "description": "Unified web UI for training and running open models like Qwen, DeepSeek, gpt-oss and Gemma locally.",
       "today_stars": "975 stars today"
     },
     {
@@ -188,44 +188,44 @@
     {
       "name": "shadps4-emu/shadPS4",
       "description": "PlayStation 4 emulator for Windows, Linux and macOS written in C++",
-      "today_stars": "683 stars today"
+      "today_stars": "292 stars today"
     }
   ],
   "hacker_news": [
     {
-      "title": "Rob Pike's 5 Rules of Programming",
+      "title": "Warranty Void If Regenerated",
+      "author": "Stwerner",
+      "score": 79,
+      "comments": 42,
+      "url": "https://nearzero.software/p/warranty-void-if-regenerated"
+    },
+    {
+      "title": "OpenRocket",
+      "author": "zeristor",
+      "score": 343,
+      "comments": 69,
+      "url": "https://openrocket.info/"
+    },
+    {
+      "title": "Wander – A tiny, decentralised tool to explore the small web",
+      "author": "susam",
+      "score": 155,
+      "comments": 50,
+      "url": "https://susam.net/wander/"
+    },
+    {
+      "title": "Rob Pike’s Rules of Programming (1989)",
       "author": "vismit2000",
-      "score": 500,
-      "comments": 272,
+      "score": 792,
+      "comments": 392,
       "url": "https://www.cs.unc.edu/~stotts/COMP590-059-f24/robsrules.html"
     },
     {
-      "title": "Nightingale – open-source karaoke app that works with any song on your computer",
-      "author": "rzzzzru",
-      "score": 338,
-      "comments": 71,
-      "url": "https://nightingale.cafe/"
-    },
-    {
-      "title": "Machine Payments Protocol (MPP)",
-      "author": "bpierre",
-      "score": 8,
-      "comments": 5,
-      "url": "https://stripe.com/blog/machine-payments-protocol"
-    },
-    {
-      "title": "Pandas Exercises for Data Analysis (Interactive)",
-      "author": "selva86",
-      "score": 98,
-      "comments": 23,
-      "url": "https://machinelearningplus.com/python/101-pandas-exercises-python-interactive/"
-    },
-    {
-      "title": "Federal Cyber Experts Called Microsoft's Cloud \"A Pile of Shit\", yet Approved It",
-      "author": "hn_acker",
-      "score": 122,
-      "comments": 59,
-      "url": "https://www.propublica.org/article/microsoft-cloud-fedramp-cybersecurity-government"
+      "title": "Nvidia NemoClaw",
+      "author": "hmokiguess",
+      "score": 204,
+      "comments": 151,
+      "url": "https://github.com/NVIDIA/NemoClaw"
     }
   ]
 }
