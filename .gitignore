@@ -10,6 +10,10 @@ __pycache__/
 venv/
 .venv/
 
+# 数据目录
+data/
+output/
+
 # 生成的文件
 report.md
 weekly_report.md
